@@ -1,0 +1,105 @@
+W0305 12:22:57.360242  3556 gpu_resources.cc:61] Please NOTE: device: 0, GPU Compute Capability: 7.5, Driver API Version: 11.6, Runtime API Version: 10.2
+W0305 12:22:57.369246  3556 dynamic_loader.cc:278] Note: [Recommend] copy cudnn into CUDA installation directory. 
+ For instance, download cudnn-10.0-windows10-x64-v7.6.5.32.zip from NVIDIA's official website, 
+then, unzip it and copy it into C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0
+You should do this according to your CUDA installation directory and CUDNN version.
+Traceback (most recent call last):
+  File "train.py", line 141, in <module>
+    train(opt)
+  File "train.py", line 49, in train
+    model = DeepQNetwork()
+  File "C:\Users\14495\Desktop\Tetris-deep-Q-learning (2)\src\deep_q_network.py", line 7, in __init__
+    self.conv1 = nn.Sequential(nn.Linear(4, 64), nn.ReLU())
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\nn\layer\common.py", line 160, in __init__
+    self.weight = self.create_parameter(
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\fluid\dygraph\layers.py", line 471, in create_parameter
+    return self._helper.create_parameter(
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\fluid\layer_helper_base.py", line 374, in create_parameter
+    return self.main_program.global_block().create_parameter(
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\fluid\framework.py", line 3988, in create_parameter
+    initializer(param, self)
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\fluid\initializer.py", line 56, in __call__
+    return self.forward(param, block)
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\fluid\initializer.py", line 614, in forward
+    out_var = _C_ops.uniform_random(out_var.shape, out_dtype,
+RuntimeError: (PreconditionNotMet) The third-party dynamic library (cudnn64_7.dll) that Paddle depends on is not configured correctly. (error code is 126)
+  Suggestions:
+  1. Check if the third-party dynamic library (e.g. CUDA, CUDNN) is installed correctly and its version is matched with paddlepaddle you installed.
+  2. Configure third-party dynamic library environment variables as follows:
+  - Linux: set LD_LIBRARY_PATH by `export LD_LIBRARY_PATH=...`
+  - Windows: set PATH by `set PATH=XXX; (at ..\paddle\phi\backends\dynload\dynamic_loader.cc:305)
+
+W0305 14:53:45.664745 25084 gpu_resources.cc:61] Please NOTE: device: 0, GPU Compute Capability: 7.5, Driver API Version: 11.6, Runtime API Version: 10.2
+W0305 14:53:45.673569 25084 gpu_resources.cc:91] device: 0, cuDNN Version: 7.6.
+0.005
+0.009666666666666667
+0.015666666666666666
+0.020666666666666667
+0.026333333333333334
+0.03266666666666666
+E0305 15:40:25.289338  8748 place.cc:347] Invalid CUDAPlace(1), must inside [0, 1), because GPU number on your machine is 1
+W0305 15:49:08.697010 24388 gpu_resources.cc:61] Please NOTE: device: 0, GPU Compute Capability: 7.5, Driver API Version: 11.6, Runtime API Version: 10.2
+W0305 15:49:08.705524 24388 gpu_resources.cc:91] device: 0, cuDNN Version: 7.6.
+0.004666666666666667
+0.011333333333333334
+0.018333333333333333
+0.027333333333333334
+0.033666666666666664
+Traceback (most recent call last):
+  File "train.py", line 151, in <module>
+    train(opt)
+  File "train.py", line 92, in train
+Traceback (most recent call last):
+  File "train.py", line 19, in <module>
+    paddle.set_device('gpu')
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 316, in set_device
+    place = _convert_to_place(device)
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 202, in _convert_to_place
+    raise ValueError("The device should not be 'gpu', "
+ValueError: The device should not be 'gpu', since PaddlePaddle is not compiled with CUDA
+Traceback (most recent call last):
+  File "train.py", line 19, in <module>
+    paddle.set_device('gpu')
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 316, in set_device
+    place = _convert_to_place(device)
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 202, in _convert_to_place
+    raise ValueError("The device should not be 'gpu', "
+ValueError: The device should not be 'gpu', since PaddlePaddle is not compiled with CUDA
+Traceback (most recent call last):
+  File "train.py", line 19, in <module>
+    paddle.set_device('gpu')
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 316, in set_device
+    place = _convert_to_place(device)
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 202, in _convert_to_place
+    raise ValueError("The device should not be 'gpu', "
+ValueError: The device should not be 'gpu', since PaddlePaddle is not compiled with CUDA
+Traceback (most recent call last):
+  File "train.py", line 19, in <module>
+    paddle.set_device('gpu')
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 316, in set_device
+    place = _convert_to_place(device)
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 202, in _convert_to_place
+    raise ValueError("The device should not be 'gpu', "
+ValueError: The device should not be 'gpu', since PaddlePaddle is not compiled with CUDA
+0.008
+0.014666666666666666
+0.019
+0.024666666666666667
+0.032
+Traceback (most recent call last):
+  File "train.py", line 19, in <module>
+    paddle.set_device('gpu')
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 316, in set_device
+    place = _convert_to_place(device)
+  File "C:\Users\14495\.conda\envs\ml\lib\site-packages\paddle\device\__init__.py", line 202, in _convert_to_place
+    raise ValueError("The device should not be 'gpu', "
+ValueError: The device should not be 'gpu', since PaddlePaddle is not compiled with CUDA
+[2023-03-05 16:40:15,206] [    INFO] topology.py:215 - HybridParallelInfo: rank_id: 0, mp_degree: 1, sharding_degree: 1, pp_degree: 1, dp_degree: 1, mp_group: [0],  sharding_group: [0], pp_group: [0], dp_group: [0], check/clip group: [0]
+W0305 16:40:16.163076 12684 gpu_resources.cc:61] Please NOTE: device: 0, GPU Compute Capability: 7.5, Driver API Version: 11.6, Runtime API Version: 10.2
+W0305 16:40:16.178697 12684 gpu_resources.cc:91] device: 0, cuDNN Version: 7.6.
+0.006666666666666667
+0.014
+W0305 17:02:35.493103 25596 gpu_resources.cc:61] Please NOTE: device: 0, GPU Compute Capability: 7.5, Driver API Version: 11.6, Runtime API Version: 10.2
+W0305 17:02:35.493103 25596 gpu_resources.cc:91] device: 0, cuDNN Version: 7.6.
+OpenCV: FFMPEG: tag 0x47504a4d/'MJPG' is not supported with codec id 7 and format 'mp4 / MP4 (MPEG-4 Part 14)'
+OpenCV: FFMPEG: fallback to use tag 0x7634706d/'mp4v'

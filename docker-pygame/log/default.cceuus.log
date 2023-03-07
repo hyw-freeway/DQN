@@ -1,0 +1,1 @@
+[{'name': 'cceuus', 'rank': -1, 'replicas': 1, 'dtype': 'cpu', 'candidate': '192.168.160.1:55829', 'endpoints': '192.168.160.1:55929'}]

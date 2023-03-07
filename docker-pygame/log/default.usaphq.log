@@ -1,0 +1,1 @@
+[{'name': 'usaphq', 'rank': -1, 'replicas': 1, 'dtype': 'cpu', 'candidate': '192.168.160.1:37587', 'endpoints': '192.168.160.1:37588'}]

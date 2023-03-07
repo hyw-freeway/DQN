@@ -1,0 +1,1 @@
+[{'name': 'ipclmk', 'rank': -1, 'replicas': 2, 'dtype': 'gpu', 'candidate': '192.168.160.1:38711', 'endpoints': '192.168.160.1:38712,192.168.160.1:38713'}]

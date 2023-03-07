@@ -1,0 +1,1 @@
+[{'name': 'wpslzb', 'rank': -1, 'replicas': 1, 'dtype': 'cpu', 'candidate': '192.168.160.1:60380', 'endpoints': '192.168.160.1:60381'}]
